@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Obsidian
+Icon=obsidian
+Exec=/opt/appimages/Obsidian-0.15.8.AppImage
+Comment=Obsidian是一个强大知识库的本地文件夹
+Categories=Development;EDITOR;
+Terminal=false
+StartupWMClass=Obsidian
+Path=
+StartupNotify=false
+MimeType=x-scheme-handler/obsidian;
