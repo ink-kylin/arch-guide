@@ -10,7 +10,6 @@
 ## Archlinux
 
 1. 安装
-
    sudo pacman -S mariadb
 
 2. 配置目录
@@ -37,7 +36,7 @@
 ```sh
 docker pull mariadb
 
-docker run --name mariadb1 \
+docker run --name mariadb \
 --detach -p 3306:3306 --restart=always \
 -v /opt/docker/mariadb/conf:/etc/mysql/conf.d \
 -v /opt/docker/mariadb/log:/var/log/mysql \
@@ -47,6 +46,31 @@ docker run --name mariadb1 \
 --env MARIADB_ROOT_PASSWORD=kylin \
 mariadb:latest
 
+
+```
+
+`docker-compose.yml`
+
+```yml
+---
+version: "0.1"
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    environment:
+      - TZ=Asia/ShangHai
+      - MARIADB_DATABASE=piwigo
+      - MARIADB_USER=albert
+      - MARIADB_PASSWORD=kylin
+      - MARIADB_ROOT_PASSWORD=kylin
+    volumes:
+      - /opt/docker/mariadb/conf:/etc/mysql/conf.d
+      - /opt/docker/mariadb/log:/var/log/mysql
+      - /opt/docker/mariadb/data:/var/lib/mysql
+    ports:
+      - 3306:3306
+    restart: unless-stopped
 
 ```
 
