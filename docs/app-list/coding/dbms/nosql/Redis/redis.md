@@ -41,6 +41,7 @@ wget http://download.redis.io/redis-stable/redis.conf
    : 后台启动 `daemonize no`
    : 开启数据持久化可选,`appendonly yes`
    : 保护模式关闭`protected-mode no`
+   - set-proc-title no
 
 4. 创建及启动容器,以指定配置文件启动
 
@@ -59,6 +60,30 @@ Reading the configuration file, at line 393
 >>> 'set-proc-title yes'
 Bad directive or wrong number of arguments
 ```
+
+`docker-compose.yml`
+
+```yml
+---
+version: "0.1"  
+services:  
+  redis:  
+    image: redis:6.0.16  
+    container_name: redis6  
+    environment:  
+      - TZ=Asia/Shanghai  
+    volumes:  
+      - /opt/docker/redis/data:/var/lib/redis  
+      - /opt/docker/redis/redis.conf:/etc/redis/redis.conf  
+    ports:  
+      - 6379:6379  
+    restart: unless-stopped  
+    command: redis-server /etc/redis/redis.conf  
+    privileged: true
+
+```
+
+
 
 ### [可视化客户端](https://redis.com.cn/clients.html)
 
