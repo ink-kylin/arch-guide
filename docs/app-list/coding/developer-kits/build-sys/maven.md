@@ -1,6 +1,4 @@
-
 # Apache Maven
-
 
 ```bash
 sudo pacman -S maven
@@ -19,11 +17,13 @@ nano ~/.m2/settings.xml
 
 ```xml
 <mirror>
-	<id>alimaven</id>
-	<mirrorOf>central</mirrorOf>
-	<name>aliyun maven</name>
-	<url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+    <id>aliyunmaven</id>
+    <mirrorOf>*</mirrorOf>
+    <name>阿里云公共仓库</name>
+    <url>https://maven.aliyun.com/repository/public</url>
 </mirror>
+
+
 
 ```
 
