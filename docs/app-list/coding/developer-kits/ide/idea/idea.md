@@ -3,7 +3,7 @@
 相关链接:
 [Intellij-IDEA-Tutorial](https://cdk8s.gitbook.io/github/)
 
--javaagent:/home/albert/.config/JetBrains/ja-netfilter-all/ja-netfilter.jar=jetbrains
+-javaagent:/home/albert/.config/JetBrains/jetbra/ja-netfilter.jar=jetbrains
 
 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
 
