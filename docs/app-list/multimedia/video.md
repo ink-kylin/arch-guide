@@ -31,3 +31,12 @@ StartupWMClass=zy
 X-AppImage-Version=2.8.4
 Categories=AudioVideo;Player;
 ```
+
+
+## Popcorn Time
+
+[Popcorn Time Online](https://popcorntime.co/)
+
+## Stremio
+
+## Kodi

@@ -1,25 +1,44 @@
+- [IDEA 社区与旗舰的区别](https://www.jetbrains.com.cn/products/compare/?product=idea&product=idea-ce)
 
-[IDEA社区与旗舰的区别](https://www.jetbrains.com.cn/products/compare/?product=idea&product=idea-ce)
+- [Intellij-IDEA-Tutorial](https://cdk8s.gitbook.io/github/)
 
-|     |  Ultimate   |  Community   |
-| --- | --- | --- |
-| 语言    |     |     |
+## 安装
 
-## Community
+###　手动安装
+
+将压缩包解压至指定位置后，
+若是旗舰版的话在`bin/name64.properties`下追加`-javaagent:/home/wilbur/.config/JetBrains/jetbra/ja-netfilter.jar=jetbrains`.
+
+通过 root 用户启动，因为需要权限创建桌面文件
+
+设置 vmoptions 变量
+
+```properties
+-Xms512m
+-Xmx1500m
+-XX:ReservedCodeCacheSize=500m
+```
+
+设置环境变量
+
+```properties
+idea.config.path=${user.home}/.jetbrains/pycharm/config
+idea.system.path=${user.home}/.jetbrains/pycharm/system
+idea.plugins.path=${idea.config.path}/plugins
+idea.log.path=${idea.system.path}/log
+```
+
+### ToolBox 自动安装
 
 ### Plugins
 
 - Code Tools
-	- Rainbow Brackets
-	- Codota
-
+  - Rainbow Brackets
+  - Codota
 
 相关链接:
-[Intellij-IDEA-Tutorial](https://cdk8s.gitbook.io/github/)
-
--javaagent:/home/albert/.config/JetBrains/jetbra/ja-netfilter.jar=jetbrains
-
-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
+token:
+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
 
 ## 推荐插件
 
@@ -29,7 +48,7 @@ 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
 - Chinese
 - PlantUML Integration
 - JRebel and XRebel
-	- [激活](https://jrebel.qekang.com/)
+  - [激活](https://jrebel.qekang.com/)
 - JRebel mybatisPlus extension
 - SequenceDiagram
 - Grep Console

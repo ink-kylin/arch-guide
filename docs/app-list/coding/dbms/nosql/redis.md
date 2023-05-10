@@ -97,7 +97,7 @@ services:
 
 - [Medis](https://getmedis.com) MacOS 中比较好的 Redis 图形化客户端工具。
 
-推荐使用[Another Redis Desktop Manager],按照以下步骤安装即可.
+推荐使用[Another Redis Desktop Manager](https://goanother.com/cn/),按照以下步骤安装即可.
 
 1. 将 AppImage 包下载至`/opt/appimages/another-redis-desktop-manager`,右键属性-权限,勾选`允许此文件作为程序允许`,下列是终端操作
 
@@ -126,3 +126,17 @@ StartupNotify=true
 
 [another redis desktop manager]: https://goanother.com/cn/
 [redis]: #Redis
+
+
+
+Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+
+
+```
+# 启用内存超额配置，以解决redis报错
+sudo nvim /etc/sysctl.d/redis.conf
+
+# add
+vm.overcommit_memory=1
+
+```

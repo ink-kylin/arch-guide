@@ -1,6 +1,6 @@
 # archlinux
 
-## 内容
+
 
 ## 基础安装
 
@@ -104,7 +104,23 @@ SDL_IM_MODULE=fcitx
 
 注销并且重新登陆,就可以正常输入了，推荐开启`云拼音`和`在程序中现实预编辑文本`选项.
 
-### 蓝牙管理器
+### 网络
+
+```sh
+#系统托盘图标
+sudo pacman -S network-manager-applet
+```
+
+### 声音
+
+Alsa 与 pulseaudio
+
+```sh
+
+
+```
+
+### 蓝牙
 
 ```shell
 
@@ -266,6 +282,10 @@ yay -S dingtalk-bin
 ### Tencent QQ
 
 [wine qq](<https://wiki.archlinux.org/title/Tencent_QQ_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)解决方案
+
+```sh
+paru -S linuxqq
+```
 
 ## 📹 网络会议
 
@@ -703,7 +723,6 @@ yay -S feeluown-local feeluown-netease feeluown-qqmusic feeluown-kuwo
 
 ## 编程
 
-
 #### Apache Kafka
 
 [Apache Kafka](https://kafka.apache.org/)  是一个分布式流平台,可以：
@@ -844,26 +863,3 @@ Hime Display
 sudo pacman -S screenkey
 ```
 
-## 虚拟机
-
-[VirtualBox](<https://wiki.archlinux.org/title/VirtualBox_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
-
-### 安装基本软件包
-
-安装软件包 [virtualbox](https://archlinux.org/packages/?name=virtualbox)、客体机插件光盘、扩展包。内核模块的安装方式要从下面二选一：
-
-```sh
-# 选择virtualbox-host-modules-arch
-sudo pacman -S virtualbox virtualbox-guest-iso virtualbox-ext-oracle
-# 加载 VirtualBox 内核模块，需要重启或者手动加载
-# 手动
-modprobe vboxdrv
-```
-
-### 从客体系统访问主机 USB 设备
-
-将需要运行 VirtualBox 的用户名添加到 `vboxusers` [用户组](https://wiki.archlinux.org/title/User_group "User group")，USB 设备才能被访问。
-
-```sh
-sudo usermod -a -G vboxusers user
-```
