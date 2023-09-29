@@ -778,6 +778,8 @@ sudo pacman -S lapce
 
 参考自[适用于 Linux 用户的 10 款出色的免费思维导图软件](https://www.linuxidc.com/Linux/2020-02/162417.htm) 与[流程图绘制](https://www.linuxidc.com/Linux/2019-11/161267.htm)
 
+[Linux下强大免费的思维导图软件，将你的想法可视化 - Linux迷](https://www.linuxmi.com/linux-minder.html)
+
 1. [Xmind](https://xmind.cn/)是一款   全功能   的思维导图和头脑风暴软件。像大脑的瑞士军刀一般，助你理清思路，捕捉创意。。
 
 安装中文版 xmind aur

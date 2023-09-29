@@ -9,6 +9,8 @@
 将压缩包解压至指定位置后，
 若是旗舰版的话在`bin/name64.properties`下追加`-javaagent:/home/wilbur/.config/JetBrains/jetbra/ja-netfilter.jar=jetbrains`.
 
+
+
 通过 root 用户启动，因为需要权限创建桌面文件
 
 设置 vmoptions 变量
@@ -24,6 +26,13 @@
 ```properties
 idea.config.path=${user.home}/.jetbrains/pycharm/config
 idea.system.path=${user.home}/.jetbrains/pycharm/system
+idea.plugins.path=${idea.config.path}/plugins
+idea.log.path=${idea.system.path}/log
+```
+
+```properties
+idea.config.path=F:/.jetbrains/idea/config
+idea.system.path=F:/.jetbrains/idea/system
 idea.plugins.path=${idea.config.path}/plugins
 idea.log.path=${idea.system.path}/log
 ```

@@ -1,7 +1,6 @@
 
 ## Music Players
 
-[5 款值得尝试的 Linux 音乐播放器](https://linux.cn/article-8309-1.html)
 
 [ieaseMusic](https://github.com/trazyn/ieaseMusic)
 
@@ -14,6 +13,8 @@
 [FeelUOwn](https://feeluown.readthedocs.io/)
 
 [Amarok](https://amarok.kde.org/)
+
+[GitHub - lyswhut/lx-music-desktop: 一个基于 electron 的音乐软件](https://github.com/lyswhut/lx-music-desktop)
 
 [Rhythmbox](https://wiki.gnome.org/Apps/Rhythmbox)
 

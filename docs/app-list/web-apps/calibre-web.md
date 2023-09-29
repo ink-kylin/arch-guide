@@ -1,4 +1,7 @@
 
+[GitHub - janeczku/calibre-web: :books: Web app for browsing, reading and downloading eBooks stored in a Calibre database](https://github.com/janeczku/calibre-web)
+
+用于浏览、阅读和下载 Calibre 数据库中存储的电子书的 Web 应用程序
 
 `docker-compose.yml`
 
