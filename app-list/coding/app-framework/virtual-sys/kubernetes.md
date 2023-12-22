@@ -1,6 +1,0 @@
-
-## installtion tools
-
-### kubectl
-
-### minikube

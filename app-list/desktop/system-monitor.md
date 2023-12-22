@@ -1,1 +1,0 @@
-- [Conky](https://conky.cc/)
